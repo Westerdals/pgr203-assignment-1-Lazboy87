@@ -55,17 +55,12 @@ public class RomanNumeralsTest {
       StringBuilder result= new StringBuilder();
 
 
-      //Needs refoactoring
+    number = toRomanDigit(number, result);
 
-      if (number >=10){
-        result.append("X");
-        number -=10;}
-
-      if (number ==9){
+    if (number ==9){
         result.append("IX");
-        number -=9;}
-
-
+        number -=9;
+      }
 
       if (number>=5)
       {
@@ -90,7 +85,13 @@ public class RomanNumeralsTest {
       return result.toString();
   }
 
-
+  private int toRomanDigit(int number, StringBuilder result) {
+    if (number >=10){
+      result.append("X");
+      number -=10;
+    }
+    return number;
+  }
 
 
 }
