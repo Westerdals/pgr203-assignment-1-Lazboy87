@@ -52,20 +52,24 @@ public class RomanNumeralsTest {
 
 
   private String toRoman(int number){
-      StringBuilder inputNumber= new StringBuilder();
+      StringBuilder result= new StringBuilder();
 
 
       //Needs refoactoring
 
-      if (number ==10){
-        inputNumber = new StringBuilder("X"); number -=10;}
+      if (number >=10){
+        result.append("X");
+        number -=10;}
+
       if (number ==9){
-        inputNumber = new StringBuilder("IX"); number -=9;}
+        result.append("IX");
+        number -=9;}
+
 
 
       if (number>=5)
       {
-        inputNumber.append("V");
+        result.append("V");
         number -=5;
 
       }
@@ -73,17 +77,17 @@ public class RomanNumeralsTest {
 
 
     if (number==4){
-      inputNumber = new StringBuilder("IV");
+      result.append("IV");
       number = 0;
     }
 
 
       for (int i = 1; i <=number ; i++) {
-        inputNumber.append("I");
+        result.append("I");
 
       }
 
-      return inputNumber.toString();
+      return result.toString();
   }
 
 
