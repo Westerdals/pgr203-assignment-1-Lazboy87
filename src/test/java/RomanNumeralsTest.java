@@ -51,20 +51,21 @@ public class RomanNumeralsTest {
 
 
 
-
   private String toRoman(int number){
-      String inputNumber="";
+      StringBuilder inputNumber= new StringBuilder();
 
 
       //Needs refoactoring
 
-      if (number ==10){inputNumber = "X"; number -=10;}
-      if (number ==9){inputNumber = "IX"; number -=9;}
+      if (number ==10){
+        inputNumber = new StringBuilder("X"); number -=10;}
+      if (number ==9){
+        inputNumber = new StringBuilder("IX"); number -=9;}
 
 
       if (number>=5)
       {
-        inputNumber+="V";
+        inputNumber.append("V");
         number -=5;
 
       }
@@ -72,17 +73,17 @@ public class RomanNumeralsTest {
 
 
     if (number==4){
-      inputNumber="IV";
+      inputNumber = new StringBuilder("IV");
       number = 0;
     }
 
 
       for (int i = 1; i <=number ; i++) {
-        inputNumber  +="I";
+        inputNumber.append("I");
 
       }
 
-      return inputNumber;
+      return inputNumber.toString();
   }
 
 
