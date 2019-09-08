@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pgr203-assignment-1-Lazboy87" />
         <module name="RomanNumerals" />
       </profile>
     </annotationProcessing>

@@ -55,40 +55,21 @@ public class RomanNumeralsTest {
       StringBuilder result= new StringBuilder();
 
 
-    number = toRomanDigit(number, result);
-
-    if (number ==9){
-        result.append("IX");
-        number -=9;
-      }
-
-      if (number>=5)
-      {
-        result.append("V");
-        number -=5;
-
-      }
+    number = toRomanDigit(number, result,10,"X");
+    number = toRomanDigit(number, result,9,"IX");
+    number = toRomanDigit(number, result,5,"V");
+    number = toRomanDigit(number, result,4,"IV");
+    number = toRomanDigit(number, result,1,"I");
 
 
-
-    if (number==4){
-      result.append("IV");
-      number = 0;
-    }
-
-
-      for (int i = 1; i <=number ; i++) {
-        result.append("I");
-
-      }
 
       return result.toString();
   }
 
-  private int toRomanDigit(int number, StringBuilder result) {
-    if (number >=10){
-      result.append("X");
-      number -=10;
+  private int toRomanDigit(int number, StringBuilder result,int digitvalue,String digitsymbol) {
+    while (number >= digitvalue){
+      result.append(digitsymbol);
+      number -= digitvalue;
     }
     return number;
   }
