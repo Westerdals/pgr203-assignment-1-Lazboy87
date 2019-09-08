@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RomanNumerals {
+public class RomanNumeralsTest {
 
   @Test
   void Conver1toI(){
@@ -39,12 +39,7 @@ public class RomanNumerals {
 
       }
 
-
-
-
-
-
-    return inputNumber;
+      return inputNumber;
   }
 
 
