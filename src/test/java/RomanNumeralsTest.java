@@ -24,16 +24,59 @@ public class RomanNumeralsTest {
   void Conver5toV(){
     assertEquals("V",toRoman(5));
   }
+  @Test
+  void Conver6toVI(){
+    assertEquals("VI",toRoman(6));
+  }
+  @Test
+  void Conver7toVII(){
+    assertEquals("VII",toRoman(7));
+  }
+  @Test
+  void Conver8toVIII(){
+    assertEquals("VIII",toRoman(8));
+  }
+
+  @Test
+  void Conver9toIX(){
+    assertEquals("IX",toRoman(9));
+  }
+
+  @Test
+  void Conver10toX(){
+    assertEquals("X",toRoman(10));
+  }
+
+
 
 
 
 
   private String toRoman(int number){
-    String inputNumber="";
-    if (number==5){inputNumber="V";}
-    else
-    if (number==4){inputNumber="IV";}
-    else
+      String inputNumber="";
+
+
+      //Needs refoactoring
+
+      if (number ==10){inputNumber = "X"; number -=10;}
+      if (number ==9){inputNumber = "IX"; number -=9;}
+
+
+      if (number>=5)
+      {
+        inputNumber+="V";
+        number -=5;
+
+      }
+
+
+
+    if (number==4){
+      inputNumber="IV";
+      number = 0;
+    }
+
+
       for (int i = 1; i <=number ; i++) {
         inputNumber  +="I";
 
