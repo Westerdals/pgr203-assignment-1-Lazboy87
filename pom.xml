@@ -34,11 +34,11 @@
                     <release>11</release>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
-            </plugin>
+            <plugin><!-- fixed -->
+                <groupId>org.apache.maven.plugins</groupId><!-- fixed -->
+                <artifactId>maven-surefire-plugin</artifactId><!-- fixed -->
+                <version>2.22.1</version><!-- fixed -->
+            </plugin><!-- fixed -->
         </plugins>
     </build>
 

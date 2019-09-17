@@ -1,6 +1,6 @@
-package no.kristiania.romanNumerals;
+package no.kristiania.romanNumerals;//fixed
 
-public class RomanConverter {
+public class RomanConverter {//fixed
 
   static String toRoman(int number){
     StringBuilder result= new StringBuilder();

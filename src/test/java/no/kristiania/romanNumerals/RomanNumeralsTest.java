@@ -1,12 +1,13 @@
-package no.kristiania.romanNumerals;
+package no.kristiania.romanNumerals;//fixed
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RomanNumeralsTest {
 
-// Lasse Og fredrik sitt arbeidkrav
+public class RomanNumeralsTest {//fixed
+
+// Lasse Hovden Og Fredrik Holanger sitt arbeidkrav
   @Test
   void Conver4toIV(){
     assertEquals("IV", RomanConverter.toRoman(4));
