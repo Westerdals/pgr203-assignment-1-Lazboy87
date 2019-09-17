@@ -1,13 +1,9 @@
-package no.kristiania.RomanNumerals;
+package no.kristiania.romanNumerals;
 
-public class romanConverter {
-
-
+public class RomanConverter {
 
   static String toRoman(int number){
-      StringBuilder result= new StringBuilder();
-
-
+    StringBuilder result= new StringBuilder();
     number = toRomanDigit(number, result,1000,"M");
     number = toRomanDigit(number, result,900,"CM");
     number = toRomanDigit(number, result,500,"D");
@@ -22,10 +18,11 @@ public class romanConverter {
     number = toRomanDigit(number, result,4,"IV");
     number = toRomanDigit(number, result,1,"I");
 
-
-
-      return result.toString();
+    return result.toString();
   }
+
+
+
 
   private static int toRomanDigit(int number, StringBuilder result, int digitvalue, String digitsymbol) {
     while (number >= digitvalue){
